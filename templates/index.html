@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Drip.Inc - Home</title>
+    <link rel="stylesheet" href="{{url_for('static', filename='style.css')}}">
+    <link rel="shortcut icon" href="{{url_for('static', filename='favicon.png')}}" type="image/x-icon">
+    <meta name="theme-color" content="#FFFFFF">
+    <meta name="title" content="Drip.Inc">
+    <meta name="description" content="Drip.Inc, your destination for all your exquisite shoes needs. Visit Now!">
+    <meta property="og:type" content="website">
+    <!-- <meta property="og:url" content="https"> -->
+    <meta property="og:title" content="Drip.Inc">
+    <meta property="og:description" content="Drip.Inc, your destination for all your exquisite shoes needs. Visit Now!">
+    <meta property="og:image" content="{{url_for('static', filename='favn.png')}}">
+    <link rel="stylesheet" href="http://www.x3dom.org/release/x3dom.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
+</head>
+<body>
+  <div class="nav container-md">
+    <div class="nav-top">
+      <center>
+        <img src="{{url_for('static', filename='drip.inc.png')}}" class="nav-logo">
+      </center> 
+      <p class="nav-no" id="nav-no">+(91) 6942080085</p>
+    </div>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <div class="nav-bottom">
+      <a href="/new" class="navlink">New</a>
+      <center class="centerednav">  
+        <a href="/brands" class="navlink navcenter" style="margin-left: 0;">Brands</a>
+        <a href="/collections" class="navlink navcenter">Collections</a>
+        <a href="/all" class="navlink navcenter">Shop All</a>
+      </center>
+      <div class="nav-things">
+        <img class="navthings" onclick="window.location.replace('/cart')" src="{{url_for('static', filename='cart.svg')}}">
+        <img class="navthings" src="{{url_for('static', filename='search.svg')}}">
+        <img class="navthings" id="userr" src="{{url_for('static', filename='user.svg')}}">
+        <div class="user-nav">
+          
+          <center>
+            <p class="unav-email">
+            {%if 'loggedin' in session%}
+              {{email}}
+            {%else%}
+            Welcome to <span class="dripincc">Drip.inc</span>
+            </p>
+          {%endif%}
+        </center>
+          <hr style="color: black; border-top: solid 2px black;">
+          {%if 'loggedin' in session%}
+            <p class="unav-name">{{fname['fname']}}</p>
+            <p id="actn-settings" class="unav-actions">User settings</p>
+            <p id="actn-pass" class="unav-actions">Change password</p>
+            <p id="actn-orders" class="unav-actions">Your Orders</p>
+            <p id="actn-logout" class="unav-actions">Logout</p>
+            <center><h3 class="dripincc" id="udinc">Drip.inc</h3></center>
+          {%else%}
+          <center>
+            <br>
+          <svg width="33" height="36.15" viewBox="0 0 18 20" fill="none" xmlns="http://www.w3.org/2000/svg" class="vuser">
+            <path fill-rule="evenodd" clip-rule="evenodd" d="M4.06433 4.93548C4.06433 2.20969 6.27402 0 8.99981 0C11.7256 0 13.9353 2.20969 13.9353 4.93548C13.9353 7.66127 11.7256 9.87097 8.99981 9.87097C6.27402 9.87097 4.06433 7.66127 4.06433 4.93548ZM8.99981 1.74194C7.23605 1.74194 5.80627 3.17174 5.80627 4.93548C5.80627 6.69923 7.23605 8.12903 8.99981 8.12903C10.7636 8.12903 12.1934 6.69923 12.1934 4.93548C12.1934 3.17174 10.7636 1.74194 8.99981 1.74194Z" fill="black"/>
+            <path fill-rule="evenodd" clip-rule="evenodd" d="M4.35484 13.3549C2.91177 13.3549 1.74194 14.5248 1.74194 15.9678V17.3477C1.74194 17.3688 1.75716 17.3867 1.7779 17.39C6.56097 18.171 11.4391 18.171 16.2221 17.39C16.2429 17.3867 16.2581 17.3688 16.2581 17.3477V15.9678C16.2581 14.5248 15.0882 13.3549 13.6452 13.3549H13.2493C13.2187 13.3549 13.1883 13.3598 13.1592 13.3692L12.1541 13.6975C10.1046 14.3666 7.89538 14.3666 5.84591 13.6975L4.8408 13.3692C4.81171 13.3598 4.78129 13.3549 4.75069 13.3549H4.35484ZM0 15.9678C0 13.5626 1.94973 11.6129 4.35484 11.6129H4.75069C4.96493 11.6129 5.17783 11.6469 5.3815 11.7133L6.38662 12.0416C8.08479 12.596 9.91521 12.596 11.6134 12.0416L12.6185 11.7133C12.8222 11.6469 13.035 11.6129 13.2493 11.6129H13.6452C16.0503 11.6129 18 13.5626 18 15.9678V17.3477C18 18.2224 17.3661 18.9682 16.5027 19.1092C11.5338 19.9205 6.46618 19.9205 1.49722 19.1092C0.633925 18.9682 0 18.2224 0 17.3477V15.9678Z" fill="black"/>
+            </svg>
+            <p class="vv">Visitor</p>
+            <p class="vlogreg"><a href="/login" class="vlogreg">LOGIN</a><span class="vlreg"><a href="/register" class="vlogreg">REGISTER</a></span></p>
+          </center>
+          {%endif%}
+        </div>
+      </div>
+    </div>
+  </div>
+  <br>
+  <main>
+    <div id="carouselExampleDark" class="carousel carousel-dark slide" data-bs-ride="carousel">
+      <div class="carousel-indicators">
+        <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+        <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="1" aria-label="Slide 2"></button>
+        <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="2" aria-label="Slide 3"></button>
+      </div>
+      <div class="carousel-inner">
+        <a href="/product/nike-air-jordan-1" class="linktoproduct">
+        <div class="carousel-item active" data-bs-interval="10000">
+          <img src="{{url_for('static', filename='carousel-1.png')}}" class="d-block w-100" alt="...">
+        </div>
+        </a>
+        <a href="/product/converse-taylor-all-star-classic" class="linktoproduct">
+        <div class="carousel-item" data-bs-interval="2000">
+          <img src="{{url_for('static', filename='carousel-2.png')}}" class="d-block w-100" alt="...">
+        </div>
+        </a>
+        <a href="/product/nike-air-max-plus-og" class="linktoproduct">
+        <div class="carousel-item">
+          <img src="{{url_for('static', filename='carousel-3.png')}}" class="d-block w-100" alt="...">
+        </div>
+        </a>
+      </div>
+      <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleDark" data-bs-slide="prev">
+        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Previous</span>
+      </button>
+      <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleDark" data-bs-slide="next">
+        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Next</span>
+      </button>
+    </div>
+    <br>
+    <center>
+      <img src="{{url_for('static', filename='brands.png')}}" class="indexbrands">
+    </center>
+    <br>
+    <br>
+    <br>
+    <div class="popular">
+      <h3 class="popular-h">Popular</h3>
+      <br>
+      <a href="/product/nike-air-jordan-1" class="linktoproduct">
+      <div class="popular-shoe" style="margin-left: 0;">
+        <img src="{{url_for ('static', filename='shoes/airjordan2zoomcomfort.png')}}" id="airjrdns1"><br><br>
+        <p class="popular-shoetxt">Nike Air Jordan 1</p><br>
+        <p class="popular-shoeprice">$128</p>
+        <div class="preview-circles cC1BBB2" onclick="airjrdn2()"></div>
+        <div class="preview-circles c6B1C22" onclick="airjrdn1()"></div>
+      </div>
+      </a>
+      <a href="/product/nike-air-max-97" class="linktoproduct">
+      <div class="popular-shoe">
+        <img src="{{url_for ('static', filename='shoes/airmax971.png')}}" id="airmax1"><br><br>
+        <p class="popular-shoetxt">Nike Air Max 97</p><br>
+        <p class="popular-shoeprice">$206.33</p>
+        <div class="preview-circles cFFFFFF" onclick="airmax3()"></div>
+        <div class="preview-circles cAF0505" onclick="airmax2()"></div>
+        <div class="preview-circles c262628" onclick="airmax1()"></div>
+      </div>
+      </a>
+      <a href="/product/vans-sk8-hi" class="linktoproduct">
+      <div class="popular-shoe">
+        <img src="{{url_for ('static', filename='shoes/vans-sk8hi1.png')}}" id="vans-sk8hi"><br><br>
+        <p class="popular-shoetxt">Vans SK8-Hi</p><br>
+        <p class="popular-shoeprice">$72.38</p>
+        <div class="preview-circles cFFFFFF" onclick="vansk8hi4()"></div>
+        <div class="preview-circles c4F6E96" onclick="vansk8hi3()"></div>
+        <div class="preview-circles cC51535" onclick="vansk8hi2()"></div>
+        <div class="preview-circles c242223" onclick="vansk8hi1()"></div>
+      </div>
+      </a>
+      <div class="popular-shoe">
+        <img src="{{url_for ('static', filename='shoes/yeezy_nostocks.png')}}" id="yeezy450"><br><br>
+        <p class="popular-shoetxt">Adidas Yeezy 450</p><br>
+        <p class="popular-shoeprice"><kbd>Out of stock</kbd></p>
+        <div class="preview-circles c1C1C1C"></div>
+      </div>
+    </div>
+      <br>
+      <br>
+      <center>
+        <a href="/product/nike-dunks-violet"><img class="dunksviolet" src="{{url_for('static', filename='nike_dunks_violet.png')}}"></a>
+      </center>
+      <br>
+      <br>
+      <div class="showcase">
+        <img src="{{url_for('static', filename='beachsliders.png')}}" class="showcase-pic">
+        <div class="showcase-main">
+          <br>
+          <br>
+          <br>
+          <br>
+          <br>
+          <h3 class="showcase-txt">Sliders<button class="showcase-btn" id="superdrybeachsliders">Buy Now</button></h3>
+        </div>      
+      </div>
+      <center>
+        <div class="whyus">
+          <h2 class="whyustxt">WHY US?</h2>
+          <br>
+          <div class="whyusmain" style="margin-left: 0;">
+            <img src="{{url_for('static', filename='whyus1.svg')}}" class="whyusimg">
+            <p class="whyushead">The one that you want? We have it.</p>
+            <p class="whyuswhy">Shop over 100,000 styles</p>
+          </div>
+          <div class="whyusmain">
+            <img src="{{url_for('static', filename='whyus2.svg')}}" class="whyusimg">
+            <p class="whyushead">4.8/5 stars and 25000+ reviews</p>
+            <p class="whyuswhy">You aint gettin a better score than that.</p>
+          </div>
+          <div class="whyusmain">
+            <img src="{{url_for('static', filename='whyus3.svg')}}" class="whyusimg">
+            <p class="whyushead">Free global returns collection service</p>
+            <p class="whyuswhy">Changed your mind? No issues</p>
+          </div>
+        </div>
+        <br>
+        <br>
+        <br>
+      </center>
+      <div class="mailinglist">
+        <img src="{{url_for('static', filename='mailist.png')}}" class="mailimg">
+        <p class="mailtxt">Enter your mail to get exclusive<br>
+          early sale access and<br>
+          new arrivals
+        </p>
+        <form method="post" class="mailform">
+          <input type="text" placeholder="Email" class="mail">
+          <input type="submit" class="mailsubmit" value=">">
+        </form>        
+      </div>
+      <br>
+      <br>
+  </main>
+  <footer>
+    <img src="{{url_for('static', filename='drip.inc.png')}}" class="footer-logo">
+  </footer>
+</body>
+</html>
+<script src="{{url_for ('static', filename='main.js')}}"></script><script src="https://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2" crossorigin="anonymous"></script>
+<script src="{{url_for ('static', filename= 'jquery.min.js')}}"></script>
+<!-- <script>
+  window.addEventListener("load", () => {
+  if ("serviceWorker" in navigator) {
+    navigator.serviceWorker.register("service-worker.js");
+  }
+});
+</script> -->
+<script>
+  $(".nav-no").css("cursor", "pointer");
+  $(".nav-no").click(function(){
+    window.open("tel:6942080085")
+  });
+  $("#userr").click(function(){
+    $(".user-nav").slideToggle()
+  })
+  $("#actn-settings").click(function(){
+    window.location.replace("/user")
+  })
+  $("#actn-pass").click(function(){
+    window.location.replace("/user/password")
+  })
+  $("#actn-orders").click(function(){
+    window.location.replace("/your-orders")
+  })
+  $("#actn-logout").click(function(){
+    window.location.replace("/logout")
+  })
+  $("#superdrybeachsliders").click(function(){
+    window.location.replace("/product/superdry-premium-beach-sliders")
+  })
+</script>

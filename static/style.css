@@ -1,0 +1,1075 @@
+@import url('https://fonts.googleapis.com/css2?family=Sedgwick+Ave+Display&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+@import url(/static/chadfont.ttf);
+
+@font-face {
+    font-family: 'chadfont';
+    src: url('/static/chadfont.ttf');
+}
+
+body{
+    background-color: #090909 !important;
+    scroll-behavior: smooth;
+    color: white;
+    font-family: 'Raleway', sans-serif;
+    font-weight: 400;
+    overflow-x: hidden;
+}
+
+.nav{
+    background-color: #090909;
+    font-family: 'Montserrat', sans-serif;
+    color:white;
+    width: 100%;
+}
+
+.nav-top{
+    display: inline;
+    margin-top: 3em; 
+    width: 100%;
+}
+
+.nav-cur{
+    display: inline;
+    user-select: none;
+    cursor: pointer;
+}
+
+#inr{
+    display: inline;
+    cursor: pointer;
+    font-weight: 600;
+    margin-left: 0.3em;
+}
+
+.nav-logo{
+    margin-top: 0;
+    cursor: pointer;
+    display: inline;
+    text-align: center;
+    margin-top: 0;
+    max-width: 7em;
+}
+
+.nav-logo:hover{
+    animation: logoglow 1s 1;
+    /* animation-; */
+}
+
+.nav-no{
+    display: inline;
+    float: right;
+    font-weight: 600;
+    margin-top: -3.8em;
+}
+
+.nav-bottom{
+    font-family: 'Raleway', sans-serif;
+    color: white;
+    width: 100%;
+}
+
+.navlink{
+    color: white;
+    font-weight: 600;
+    text-decoration: none;
+}
+
+.navlink:hover{
+    color: white;
+}
+
+.navcenter{
+    text-align: center;
+    display: inline;
+    font-weight: 600;
+    margin-left: 2em;
+}
+
+.centerednav{
+    display: inline;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.nav-things{
+    float: right;
+    display: inline;
+}
+
+.navthings{
+    margin-right: 1em;
+    cursor: pointer;
+}
+
+.carousel-control-prev{
+    width: 7% !important;
+}
+.carousel-control-next{
+    width: 7% !important;
+}
+
+
+/* width */
+::-webkit-scrollbar {
+  border-radius: 10em;
+  width: 5px; 
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  border-radius: 10em;
+  background: none;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  border-radius: 10em;
+  background: #d2d2d2;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: #afafaf;
+  border-radius: 10em;
+}
+
+.popular{
+    font-family: 'Raleway', sans-serif;
+    color: white;
+    font-weight: 600;
+    margin-left: 4em;
+    margin-right: 4em;
+}
+
+.popular-shoe{
+    display: inline-block;
+    font-family: 'Raleway', sans-serif;
+    width: 15%;
+    margin-left: 9em;
+}
+
+.popular-shoetxt{
+    margin-block-end: 0;
+    line-height: 0;
+    font-size: 1.3em;
+    width: 300%;
+}
+
+.popular-shoeprice{
+    margin-block-start: 0;
+    line-height: 0.4em;
+    color: white;
+    display: inline;
+}
+
+.preview-circles{
+    width: 20px;
+    /* position: absolute; */
+    height: 20px;
+    background-color: #ffffff;
+    display: inline;
+    border-radius:100%;
+    margin-left: 0.5em;
+    float: right;
+    cursor: pointer;
+}
+
+.c6B1C22{
+    background-color: #6B1C22;
+    /* margin-left: ; */
+}
+
+.cC1BBB2{
+    background-color: #C1BBB2;
+}
+
+.c262628{
+    background-color: #262628;
+}
+
+.cAF0505{
+    background-color: #AF0505;
+}
+
+.cFFFFFF{
+    background-color: #FFFFFF;
+}
+
+.c242223{
+    background-color: #242223;
+}
+
+.cC51535{
+    background-color: #C51535;
+}
+
+.c4F6E96{
+    background-color: #4F6E96;
+}
+
+.dunksviolet{
+    left: 0;
+    width: 100%;
+    height: 80%;
+    max-width: 90%;
+    right: 0;
+}
+
+.showcase{
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 700;
+    color: white;
+    margin-top: 1em;
+    margin-bottom: 10em;
+}
+
+.showcase-main{
+    width: 40%;
+    display: inline;
+}
+
+.showcase-btn{
+    border: 1px solid #FFFFFF;
+    width: 98px;
+    height: 35px;
+    margin-top: 3em;
+    font-weight: 600;
+    color: white;
+    font-family: 'Raleway', sans-serif;
+    font-size: 0.4em;
+    background-color: transparent;
+    margin-left: 21%;
+}
+
+.showcase-txt{
+    display: inline;
+    font-size: 2.3em;
+    font-weight: 700;
+    /* margin-top: 40em; */
+    margin-left: 20%;
+}
+
+.showcase-pic{
+    display: inline;
+    float: right;
+}
+
+.whyus{
+    font-family: 'Montserrat', sans-serif;
+    color: white;
+    width: 80%;
+}
+
+.whyustxt{
+    font-weight: 700;
+}
+
+.whyusimg{
+    max-width: 4em;
+}
+
+.whyushead{
+    font-family: 'Montserrat';
+font-style: normal;
+font-weight: 600;
+margin-block-end: 0;
+}
+
+.whyuswhy{
+    font-family: 'Montserrat';
+    margin-block-end: 0;
+    font-style: normal;
+    font-weight: 500;
+    color: #C4C4C4;
+}
+
+.whyusmain{
+    display: inline-block;
+    margin-left: 5em;
+}
+
+.mailinglist{
+    margin-left:10em;
+    margin-right:10em;
+}
+
+.mailimg{
+    display: inline;
+}
+
+.mailtxt{
+    font-family: 'Raleway', sans-serif;
+    color: white;
+    display: inline-block;
+    vertical-align: top;
+    font-size: 1.7em;
+    margin-left: 2em;
+}
+
+.mail{
+    width: 305px;
+    height: 50px;
+    background: #1F1F1F;
+    border: 1px solid #FFFFFF;
+    font-family: 'Raleway', sans-serif;
+    color: white;
+    padding-left: 1em;
+}
+
+.mailform{
+    display: inline;
+    float: right;
+    margin-right: 6em;
+    margin-top: -12em;
+}
+
+.mailsubmit{
+    width: 50px;
+    color: white;
+    display: inline;
+    font-size: 1.9em;
+    height: 50px;
+    margin-left: -0.15em;
+    vertical-align: bottom;
+    background: #1F1F1F;
+    border: 1px solid #FFFFFF;
+}
+
+footer{
+    background: #171717;
+    width: 100%;
+    height: 8em;
+}
+
+.footer-logo{
+    max-width: 7em;
+    margin-top: 3em;
+    margin-left: 50%;
+    transform: translateX(-50%);
+}
+
+.user-nav{
+    width: 236px;
+    height: 280px;
+    position: absolute;
+    margin-top: 1em;
+    right: 1em;
+    background: rgb(226, 226, 226);
+    z-index: 69;
+    display: none;
+    border-radius: 16px;
+}
+
+.unav-email{
+    color: black;
+    font-family: 'Raleway', sans-serif;
+    font-weight: 400;
+    padding-top: 1em;
+    margin-block-end: 1em;
+}
+
+.dripincc{
+    font-family: 'Sedgwick Ave Display', sans-serif;
+}
+
+.unav-name{
+    color: black;
+    font-weight: 400;
+    margin-left: 0.9em;
+}
+.unav-actions{
+    margin-left: 2em;
+    color: black;
+    font-weight: 700;
+    margin-block-end: 0.3em;
+    font-size: 0.9em;
+    margin-top: 0;
+    cursor: pointer;
+}
+
+#udinc{
+    text-shadow: 0px 9px 4px rgba(0, 0, 0, 0.25);
+    color: black;
+    margin-top: 0.7em;
+}
+
+.vuser{
+    color:black;
+    max-width: 5em;
+}
+
+.vv{
+    color: black;
+    font-size: 1.4em;
+    margin-top: 0.2em;
+}
+
+.vlogreg{
+    font-weight: 700;
+    cursor: pointer;
+    text-decoration: none;
+    color: black;
+}
+
+.vlogreg:hover{
+    color: black;
+}
+
+.vlreg{
+    margin-left: 3em;
+}
+
+.regform{
+    font-family: 'Raleway';
+    display: inline;
+    float: left;
+    margin-left: 5em;
+}
+
+.logreginput{
+    width: 535px;
+    height: 73px;
+    outline: none;
+    color: white;
+    font-family: 'Raleway', sans-serif;
+    padding-left: 2em;
+    background: #111111;
+    border: 1px solid #FFFFFF;
+    border-radius: 12px;
+}
+
+.logregform{
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    left: 10%;
+}
+
+.logreglabel{
+    font-family: 'Raleway', sans-serif;
+    color: white;
+    font-weight: 300;
+}
+
+.formimg{
+    float: right;
+    right:0;
+    max-width: 33em;
+    pointer-events: none;
+    user-select: none;
+}
+
+.logregsubmit{
+    width: 131px;
+    height: 46px;border: 1px solid #FFFFFF;
+    border-radius: 12px;
+    background-color: transparent;
+    color: white;
+    font-family: 'Raleway', sans-serif;
+}
+
+.errmsg{
+    color: rgb(255, 0, 0);
+}
+
+.userprofile{
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    margin-left: 3em;
+}
+
+.usr-field{
+    width: 48em;
+    height: 9.5em;
+    left: 64px;
+    top: 148px;
+    background: #111111;
+    margin-top: 3em;
+    border-radius: 14px;
+}
+
+.usr-fieldname{
+    font-family: 'chadfont';
+    color: white;
+    margin-left: 2em;
+    margin-top: 2em;
+    display: inline-block;
+    position:relative;
+}
+
+.usr-editinput{
+    background: #111111;
+    border: 1px solid #FFFFFF;
+    border-radius: 8px;
+    display: inline-block;
+    position: absolute;
+    right: 3em;
+    margin-top: -3.5em;
+    width: 23em;
+    height: 4em;
+    font-family: 'Raleway', sans-serif;
+    color: whitesmoke;
+    padding-left: 2em;
+}
+
+.formimg2{
+    float: right;
+    right:0;
+    max-width: 27.5em;
+    pointer-events: none;
+    user-select: none;
+    position: absolute;
+    top:0;
+}
+
+.usr-editsubmit{
+    font-family: 'chadfont';
+    background-color: transparent;
+    outline: none;
+    border: none;
+    color: white;
+    margin-top: 1em;
+    margin-right: 2.5em;
+    float: right;
+}
+
+.brands{
+    margin-top: 3em;
+}
+
+.brands-txt{
+    font-family: 'Sedgwick Ave Display', sans-serif;
+    color: white;
+    margin-left: 3em;
+}
+
+.brandsbrands{
+    margin-top: 5em;
+}
+
+.brandsbrand{
+    margin-left: 13em;
+}
+
+.brandsbrandsname{
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 300;
+    color: #FFFFFF;
+    font-size: 1.5em;
+    margin-left: 3em;
+    margin-top: 5em;
+    float: left;
+}
+
+.newbanner{
+    max-width: 79em;
+    margin-top: 1em;
+}
+
+.newmain{
+    margin-top: 2em;
+    margin-bottom: 2em;
+}
+
+.newnew{
+    font-family: 'Raleway', sans-serif;
+    color: white;
+    text-align: center;
+    font-weight: 700;
+    font-size: 1.9em;
+}
+
+.new-shoe{
+    display: inline-block;
+    font-family: 'Raleway', sans-serif;
+    width: 20%;
+    color: white;
+    margin-left: 8em;
+}
+
+.new-shoetxt{
+    margin-block-end: 0;
+    line-height: 0;
+    font-size: 1.6em;
+    width: 300%;
+    color: white;
+}
+
+.new-shoeprice{
+    margin-block-start: 0;
+    line-height: 0.4em;
+    font-size: 1.2em;
+    font-family: 'chadfont';
+    color: white;
+    display: inline;
+}
+
+.newbrand{
+    /* width: 20px; */
+    /* position: absolute; */
+    /* height: 20px; */
+    /* background-color: #ffffff; */
+    display: inline;
+    border-radius:100%;
+    float: right;
+    /* filter: drop-shadow(0 0 0.6rem white); */
+    max-width: 2.5em;
+    margin-top: -0.6em;
+    /* cursor: pointer; */
+}
+
+.premiumnewbanner{
+    width: 100%;
+    margin-top: 1em;
+    position: absolute;
+    left: 0;
+    z-index: -1 ;
+}
+
+.pn-head{
+    padding-top: 3em;
+    color: white;
+    font-family: 'chadfont';
+}
+
+.premiumnew-shoe{
+    display: inline-block;
+    font-family: 'Raleway', sans-serif;
+    width:20%;
+    color: white;
+    margin-left: 50%;
+    transform: translateX(-50%);
+}
+
+.premiumnew-shoetxt{
+    margin-block-end: 0;
+    line-height: 0;
+    font-size: 3em;
+    width:300%;
+    color: white;
+}
+
+.premiumnew-shoeprice{
+    margin-block-start: 0;
+    line-height: 0.4em;
+    font-size: 1.2em;
+    font-family: 'chadfont';
+    color: white;
+    display: inline;
+}
+
+.premiumnewbrand{
+    /* width: 20px; */
+    /* position: absolute; */
+    /* height: 20px; */
+    /* background-color: #ffffff; */
+    display: inline;
+    border-radius:100%;
+    float: right;
+    /* filter: drop-shadow(0 0 0.6rem white); */
+    margin-top: -2.3em;
+    /* cursor: pointer; */
+}
+
+.collections-head{
+    font-family: 'Raleway';
+    font-style: normal;
+    font-weight: 200;
+    font-size: 32px;
+    line-height: 38px;
+    margin-top: 1em;
+    margin-left: 2em;
+    color: #FFFFFF;
+}
+
+.collections{
+    font-family: 'chadfont';
+    margin-bottom: 2em;
+}
+
+.collection{
+    width: 397px;
+    height: 205px;
+    display: inline-block;
+    margin-left: 4em;
+    margin-top: 2em;
+    border-radius: 2em;
+}
+
+.collection-img{
+    position: relative;
+    z-index: -1;
+}
+
+.allproducts{
+    font-weight: 400;
+    font-size: 1.4em;
+    color: white;
+    margin-top: 1em;
+    margin-left: 2em;
+    font-family: 'Raleway', sans-serif;
+}
+
+.collections-topik{
+    color: white;
+    z-index: 2;
+    margin-top: -4.3em;
+    display: block;
+}
+
+.all-shoe{
+    display: inline-block;
+    font-family: 'Raleway', sans-serif;
+    width: 15%;
+    color: white;
+    margin-left: 7em;
+}
+
+.all-shoetxt{
+    margin-block-end: 0;
+    line-height: 0;
+    font-size: 1.3em;
+    width: 300%;
+    color: white;
+}
+
+.all-shoeprice{
+    margin-block-start: 0;
+    line-height: 0.1em;
+    font-size: 1em;
+    font-family: 'chadfont';
+    color: white;
+    display: inline;
+}
+
+.allbrand{
+    /* width: 20px; */
+    /* position: absolute; */
+    /* height: 20px; */
+    /* background-color: #ffffff; */
+    display: inline;
+    float: right;
+    /* filter: drop-shadow(0 0 0.6rem white); */
+    max-width: 2em;
+    margin-top: -0.6em;
+    /* cursor: pointer; */
+}
+
+.allsort{
+    font-size: 0.9em;
+    font-weight: 700;
+    float: right;
+    margin-right: 5em;
+}
+
+*{
+    outline: none;
+}
+
+.errlogo{
+    color: white;
+    font-family: 'Sedgwick Ave Display', sans-serif;
+    margin-top: 1em;
+    margin-left: 1em;
+}
+
+.logomsg{
+    color: #FFFFFF;
+    font-size: 4em;
+    text-align: center;
+    font-family: 'Sedgwick Ave Display';
+    text-shadow: 0px 14px 4px rgba(255, 255, 255, 0.25);
+}
+
+.logoactn{
+    font-family: 'chadfont';
+    font-style: normal;
+    font-weight: 700;
+    float: right;
+    font-size: 1.5em;
+    margin-top: 0.3em;
+    /* identical to box height */
+    margin-right: 35%;
+    color: white;
+    text-shadow: 0px 10px 4px rgba(255, 255, 255, 0.76);
+}
+
+.err{
+    position: absolute;
+    width: 100%;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.errgraphic{
+    float: right;
+    max-width: 30em;
+}
+
+.product-imgs{
+    margin-top: 2em;
+    width: 55%;
+    display: inline-block;
+}
+
+.smolproductimg{
+    max-width: 4em;
+}
+
+.product-imgs-small{
+    width: 7%;
+    margin-left: 6em;
+    display: inline-block;
+}
+
+.product-img-big{
+    max-width: 37.8em;
+    margin-top: -19.5em !important;
+    margin-block-start: 0;
+    margin-left: 2em;
+}
+
+.product-about{
+    display: inline-block;
+    vertical-align: top;
+    width: 40%;
+}
+
+.product-brand{
+    max-width: 2em;
+    margin-top: 1.5em;
+}
+
+.product-name{
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 400;
+    margin-top: 0.5em;
+    font-size: 2.3em;
+    color: white;
+}
+
+.product-price{
+    font-family: 'chadfont';
+    color: white;
+    font-size: 1.3em;
+}
+
+.addtocart{
+    width: 160px;
+    height: 48px;
+    font-family: 'Raleway', sans-serif;
+    color: white;
+    font-weight: 500;
+    background: #1F1F1F;
+    border-radius: 6px;
+}
+.product-desc{
+    width: 100%;
+    display: block;
+    font-family: 'Raleway', sans-serif;
+    margin-top: 2em;
+    color: white;
+}
+
+.reccomended{
+    margin-top: 4em;
+}
+
+.rec-title{
+    font-family: 'Raleway', sans-serif;
+    color: white;
+    margin-top: 2em;
+    margin-left: 2em;
+}
+
+.linktoproduct{
+    text-decoration: none;
+    color: white;
+}
+
+.indexbrands{
+    max-width: 45em;
+    display: none;
+}
+
+.linktoproduct:hover{
+    color: white;
+    text-decoration: none;
+}
+
+@media screen and (max-width:1096px) {
+    .popular-shoe{
+        display: block;
+        position: relative;
+        margin-left: 50% !important;
+        transform: translateX(-50%);
+        margin-bottom: 2em;
+        width: 100%;
+    }
+    .whyusmain{
+        margin-left: 0 !important;
+        margin-bottom: 2em;
+    }   
+}
+
+@media screen and (max-width:1482px) {
+    .mailform{
+        margin-right: 0;
+        position: relative;
+        display: block;
+        width: 100%;
+        margin-top: 0;
+    }
+}
+
+@media screen and (max-width:1473px){
+    .mail{
+        position: relative;
+        margin-left: 2em;
+        margin-right: 0;
+        display: inline-block;
+    }
+    .mailtxt{
+        width: 100%;
+        position: relative;
+        display: block;
+    }
+}
+
+@media screen and (max-width:1142px) {
+    .all-shoe{
+        display: block;
+        position: relative;
+        width: 50%;
+    }
+}
+
+@media screen and (max-width:1203px){   
+    .new-shoe{
+        display: block;
+        position: relative;
+        font-family: 'Raleway', sans-serif;
+        width: 50%;
+        color: white;
+        margin-left: 50%;
+        transform: translateX(-50%);
+    }
+    .premiumnew-shoe{
+        display: block;
+        font-family: 'Raleway', sans-serif;
+        width:60%;
+        color: white;
+        margin-left: 50%;
+        transform: translateX(-50%);
+    }
+}
+
+.cartuser{
+    float: right;
+    margin-top: 2em;
+    margin-right: 3em;
+}
+
+.cartitem{
+    width: 54em;
+    height: 8em;
+    margin-left: 2em;
+    margin-top: 2em;
+    background: #161616;
+    border-radius: 13px;
+}
+
+.cartmain{
+    margin-top: 3em;
+    margin-left: 2em;
+    overflow-y: scroll;
+    height: 35em;
+    width: 60%;
+}
+
+.productname{
+    color: white;
+    font-size: 1.3em;
+    font-weight: 400;
+    font-family: 'Raleway', sans-serif;
+    margin-left: 2em;
+    padding-top: 2.3em;
+}
+
+.cartcost{
+    font-family: 'Raleway', sans-serif;
+    font-weight: 700;
+    display: inline;
+    color: white;
+    float: right;
+    margin-right: 2em;
+    margin-top: 0;
+    padding-top: 0;
+}
+
+@media screen and (max-width:1516px) {
+    .cartmain{
+        width: 70%;
+    }
+}
+
+@media screen and (max-width:1314px) {
+    .cartmain{
+        width: 80%;
+    }
+}
+
+@media screen and (max-width:1148px) {
+    .cartmain{
+        width: 90%;
+    }
+}
+
+@media screen and (max-width:1018px) {
+    .cartmain{
+        width: 100%;
+        margin-right: 20%;
+    }
+    .cartitem{
+        width: 45em;
+        margin-right: 2em;
+    }
+}
+
+
+@media screen and (max-width:807px) {
+    .cartmain{
+        width: 100%;
+        margin-right: 20%;
+    }
+    .cartitem{
+        width: 25em;
+        margin-right: 2em;
+    }
+}
+
+@media screen and (max-width:1484px) {
+    .product-imgs-small{
+        margin-left: 2em;
+    }
+}
+
+@media screen and (max-width:1354px) {
+    .product-imgs-small{
+        display: inline;
+    }
+    .product-img-big{
+        margin-top: 0;
+    }
+    .product-about{
+        display: block;
+        position: relative;
+        left: 50%;
+        transform: translateX(-50%);
+        width: 80%;
+    }
+}

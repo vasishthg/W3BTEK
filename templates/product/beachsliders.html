@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Superdry Premium Beach Sliders - Drip.Inc</title>
+    <link rel="stylesheet" href="{{url_for('static', filename='style.css')}}">
+    <link rel="shortcut icon" href="{{url_for('static', filename='favicon.png')}}" type="image/x-icon">
+    <meta name="theme-color" content="#FFFFFF">
+    <meta name="title" content="Drip.Inc">
+    <meta name="description" content="Drip.Inc, your destination for all your exquisite shoes needs. Visit Now!">
+    <meta property="og:type" content="website">
+    <!-- <meta property="og:url" content="https"> -->
+    <meta property="og:title" content="Drip.Inc">
+    <meta property="og:description" content="Drip.Inc, your destination for all your exquisite shoes needs. Visit Now!">
+    <meta property="og:image" content="{{url_for('static', filename='favn.png')}}">
+    <link rel="stylesheet" href="http://www.x3dom.org/release/x3dom.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
+</head>
+<body>
+  <div class="nav container-md">
+    <div class="nav-top">
+      <center>
+        <img src="{{url_for('static', filename='drip.inc.png')}}" class="nav-logo" onclick="window.location.replace('/')" >
+      </center> 
+      <p class="nav-no" id="nav-no">+(91) 6942080085</p>
+    </div>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <div class="nav-bottom">
+      <a href="/new" class="navlink">New</a>
+      <center class="centerednav">  
+        <a href="/brands" class="navlink navcenter" style="margin-left: 0;">Brands</a>
+        <a href="/collections" class="navlink navcenter">Collections</a>
+        <a href="/all" class="navlink navcenter">Shop All</a>
+      </center>
+      <div class="nav-things">
+        <img class="navthings" onclick="window.location.replace('/cart')" src="{{url_for('static', filename='cart.svg')}}">
+        <img class="navthings" src="{{url_for('static', filename='search.svg')}}">
+        <img class="navthings" id="userr" src="{{url_for('static', filename='user.svg')}}">
+        <div class="user-nav">
+          
+          <center>
+            <p class="unav-email">
+            {%if 'loggedin' in session%}
+              {{email}}
+            {%else%}
+            Welcome to <span class="dripincc">Drip.inc</span>
+            </p>
+          {%endif%}
+        </center>
+          <hr style="color: black; border-top: solid 2px black;">
+          {%if 'loggedin' in session%}
+            <p class="unav-name">{{fname['fname']}}</p>
+            <p id="actn-settings" class="unav-actions">User settings</p>
+            <p id="actn-pass" class="unav-actions">Change password</p>
+            <p id="actn-orders" class="unav-actions">Your Orders</p>
+            <p id="actn-logout" class="unav-actions">Logout</p>
+            <center><h3 class="dripincc" id="udinc">Drip.inc</h3></center>
+          {%else%}
+          <center>
+            <br>
+          <svg width="33" height="36.15" viewBox="0 0 18 20" fill="none" xmlns="http://www.w3.org/2000/svg" class="vuser">
+            <path fill-rule="evenodd" clip-rule="evenodd" d="M4.06433 4.93548C4.06433 2.20969 6.27402 0 8.99981 0C11.7256 0 13.9353 2.20969 13.9353 4.93548C13.9353 7.66127 11.7256 9.87097 8.99981 9.87097C6.27402 9.87097 4.06433 7.66127 4.06433 4.93548ZM8.99981 1.74194C7.23605 1.74194 5.80627 3.17174 5.80627 4.93548C5.80627 6.69923 7.23605 8.12903 8.99981 8.12903C10.7636 8.12903 12.1934 6.69923 12.1934 4.93548C12.1934 3.17174 10.7636 1.74194 8.99981 1.74194Z" fill="black"/>
+            <path fill-rule="evenodd" clip-rule="evenodd" d="M4.35484 13.3549C2.91177 13.3549 1.74194 14.5248 1.74194 15.9678V17.3477C1.74194 17.3688 1.75716 17.3867 1.7779 17.39C6.56097 18.171 11.4391 18.171 16.2221 17.39C16.2429 17.3867 16.2581 17.3688 16.2581 17.3477V15.9678C16.2581 14.5248 15.0882 13.3549 13.6452 13.3549H13.2493C13.2187 13.3549 13.1883 13.3598 13.1592 13.3692L12.1541 13.6975C10.1046 14.3666 7.89538 14.3666 5.84591 13.6975L4.8408 13.3692C4.81171 13.3598 4.78129 13.3549 4.75069 13.3549H4.35484ZM0 15.9678C0 13.5626 1.94973 11.6129 4.35484 11.6129H4.75069C4.96493 11.6129 5.17783 11.6469 5.3815 11.7133L6.38662 12.0416C8.08479 12.596 9.91521 12.596 11.6134 12.0416L12.6185 11.7133C12.8222 11.6469 13.035 11.6129 13.2493 11.6129H13.6452C16.0503 11.6129 18 13.5626 18 15.9678V17.3477C18 18.2224 17.3661 18.9682 16.5027 19.1092C11.5338 19.9205 6.46618 19.9205 1.49722 19.1092C0.633925 18.9682 0 18.2224 0 17.3477V15.9678Z" fill="black"/>
+            </svg>
+            <p class="vv">Visitor</p>
+            <p class="vlogreg"><a href="/login" class="vlogreg">LOGIN</a><span class="vlreg"><a href="/register" class="vlogreg">REGISTER</a></span></p>
+          </center>
+          {%endif%}
+        </div>
+      </div>
+    </div>
+  </div>
+  <br>
+  <main>
+    <div class="product-imgs">
+        <div class="product-imgs-small">
+            <img src="{{url_for('static', filename='products/beachsliders/upload9223368955665734269.jpg')}}" class="smolproductimg"><br><br>
+            <img src="{{url_for('static', filename='products/beachsliders/upload9223368955665734272.jpg')}}" class="smolproductimg"><br><br>
+            <img src="{{url_for('static', filename='products/beachsliders/upload9223368955665734269.jpg')}}" class="smolproductimg"><br><br>
+            <img src="{{url_for('static', filename='products/beachsliders/upload9223368955665734272.jpg')}}" class="smolproductimg">
+        </div>
+        <img class="product-img-big" src="{{url_for('static', filename='products/beachsliders/upload9223368955665734271.jpg')}}">
+    </div>
+    <div class="product-about">
+        <img src="{{url_for('static', filename='nike.svg')}}" class="product-brand">
+        <br>
+        <h1 class="product-name">Premium Beach Sliders</h1>
+        <p class="product-price">$29.95</p>
+        <form method="post">
+          <input hidden>
+          <a href="#"><input type="submit" value="Add to cart" class="addtocart"></a>
+        </form>
+        <p class="product-desc">Superdry Premium beach sliders. Stroll the beach in style this season with these premium beach sliders featuring, a microfibre foot strap, moulded footbed and all over subtle camo print lining. Finished with a textured Superdry logo across the foot strap and a Superdry logo badge on the sole.</p>
+    </div>
+    <div class="reccomended">
+        <h3 class="rec-title">You may also like these:</h3>
+        <div class="newmain">
+    <a href="/product/nike-airjordans-XXXVI-low" class="linktoproduct">
+            <a href="/product/nike-airjordans-XXXVI-low" class="linktoproduct">
+            <div class="new-shoe" >
+              <img src="{{url_for ('static', filename='shoes/AirJordansXXXVILow.png')}}"><br><br>
+              <p class="new-shoetxt">Air Jordans XXXVI Low</p><br>
+              <p class="new-shoeprice">$256.57</p>
+              <img class="newbrand" src="{{url_for('static', filename='nike.svg')}}">   
+            </div>
+            </a>
+            <a href="/product/nike-tiempo-legend-9-elite-FG" class="linktoproduct">
+            <div class="new-shoe">
+              <img src="{{url_for ('static', filename='shoes/tiempolegend9elitefg.png')}}" style="margin-left:0; margin-right:0;"><br><br>
+              <p class="new-shoetxt">Tiempo Legend 9 Elite FG</p><br>
+              <p class="new-shoeprice">$295.06</p>
+              <img class="newbrand" src="{{url_for('static', filename='nike.svg')}}">   
+            </div>
+            </a>
+            <a href="/product/nike-air-force-1-react" class="linktoproduct">
+                <div class="new-shoe">
+                  <img src="{{url_for ('static', filename='shoes/airforce1react.png')}}" style="margin-left:0; margin-right:0;"><br><br>
+                  <p class="new-shoetxt">Air Force 1 React</p><br>
+                  <p class="new-shoeprice">$153.96</p>
+                  <img class="newbrand" src="{{url_for('static', filename='nike.svg')}}">   
+                </div>
+            </a>
+        </div>
+    </div>
+  </main>
+  <!-- <footer>
+    <img src="{{url_for('static', filename='drip.inc.png')}}" class="footer-logo">
+  </footer> -->
+</body>
+</html>
+<script src="{{url_for ('static', filename='main.js')}}"></script><script src="https://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2" crossorigin="anonymous"></script>
+<script src="{{url_for ('static', filename= 'jquery.min.js')}}"></script>
+<!-- <script>
+  window.addEventListener("load", () => {
+  if ("serviceWorker" in navigator) {
+    navigator.serviceWorker.register("service-worker.js");
+  }
+});
+</script> -->
+<script>
+  $(".nav-no").css("cursor", "pointer");
+  $(".nav-no").click(function(){
+    window.open("tel:6942080085")
+  });
+  $("#userr").click(function(){
+    $(".user-nav").slideToggle()
+  })
+  $("#actn-settings").click(function(){
+    window.location.replace("/user")
+  })
+  $("#actn-pass").click(function(){
+    window.location.replace("/user")
+  })
+  $("#actn-orders").click(function(){
+    window.location.replace("/your-orders")
+  })
+  $("#actn-logout").click(function(){
+    window.location.replace("/logout")
+  })
+</script>

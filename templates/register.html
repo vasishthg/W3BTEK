@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Get Ready to Drip</title>
+    <link rel="stylesheet" href="{{url_for('static', filename='style.css')}}">
+    <link rel="shortcut icon" href="{{url_for('static', filename='favicon.png')}}" type="image/x-icon">
+    <meta name="theme-color" content="#FFFFFF">
+    <meta name="title" content="Drip.Inc - Register">
+    <meta name="description" content="Drip.Inc, your destination for all your exquisite shoes needs. Visit Now!">
+    <meta property="og:type" content="website">
+    <!-- <meta property="og:url" content="https"> -->
+    <meta property="og:title" content="Drip.Inc - Register">
+    <meta property="og:description" content="Drip.Inc, your destination for all your exquisite shoes needs. Visit Now!">
+    <meta property="og:image" content="{{url_for('static', filename='favn.png')}}">
+    <link rel="stylesheet" href="http://www.x3dom.org/release/x3dom.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
+</head>
+<body style="overflow-y: hidden; overflow-x:hidden;">
+  <form class="logregform" method="post" autocomplete="off" autocapitalize="on">
+	<p class="errmsg">{{errmsg}}</p>
+
+	<label for="fname">
+		<h2 class="logreglabel">Full Name</h2>
+	</label><br>
+	<input type="text" name="fname"autocapitalize="on" placeholder="John Doe" id="fname" class="logreginput"><br><br><br>
+	<label for="email" class="logreglabel">
+		<h2 class="logreglabel">Email</h2>
+	</label><br>
+	<input type="email" name="email"autocapitalize="on" placeholder="john@drip.inc" id="email" class="logreginput"><br><br><br>
+	<label for="password" class="logreglabel">
+		<h2 class="logreglabel">Password</h2>
+	</label><br>
+	<input type="password" name="password"autocapitalize="on" placeholder="drip.inc@1234" id="password" class="logreginput"><br><br><br>
+	<input type="submit" class="logregsubmit">
+  </form>
+  <img src="{{url_for('static', filename='logreglog.png')}}"class='formimg'>
+</body>
+</html>
