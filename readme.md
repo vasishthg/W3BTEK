@@ -18,7 +18,7 @@ MySQL setup -
         View setup - go to "/static/setup/cart-setup.png"<br><br>
 3. Table Setup<br>
     1. Product setup - <br>
-        View setup - go to "/static/setup/product-setup2.png"<br>
+        View setup - go to "/static/setup/products-setup2.png"<br>
     2. Cart Setup - <br>
         View setup - go to "/static/setup/cart-setup2.png" <br>
         Make sure to include [] in productsid column<br>
